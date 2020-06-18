@@ -1,0 +1,824 @@
+html {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+body {
+    background: #000;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    color: #fff;
+    font: normal 14px sans-serif;
+    cursor: url('imagens/cursor.png'), auto;
+}
+
+#divPai {
+    padding: 0;
+    margin: 0;
+    display: table;
+}
+
+#divJogo {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#divMochila {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#frases {
+    position: absolute;
+    color: white;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    white-space: pre-wrap;
+    width: 800px;
+    line-height: 20px;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: : border-box;
+}
+
+notificacao {
+    animation-name: sobeDesce;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes notificacao {
+    0% {
+        rigth: 10%;
+        height: 0%;
+        box-shadow: none;
+    }
+
+    100% {
+        rigth: 30%;
+        box-shadow:20px 20px 50px grey;
+    }
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+#titulo {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    text-align: center;
+    font-size: 250%;
+    top: 25%;
+    width: 100%;
+}
+
+#start {
+    position: absolute;
+    bottom: 15%;
+    left: 45%;
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 80%;
+    background: #000;
+    border: inset 2px;
+    border-color: #fff;
+    color: #fff;
+    text-align: center;
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+.fundo {
+    height: 600px;
+    width: 800px;
+}
+
+.celular {
+    position: absolute;
+    height: 500px;
+    width: 280px;
+    bottom: 50px;
+    right: 520px;
+    box-shadow: 40px;
+}
+
+#chat {
+    position: absolute;
+    bottom: 158px;
+    right: 540px;
+    height: 290px;
+    width: 240px;
+    background-color: rgba(195, 230, 222);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+#contato {
+    position: absolute;
+    bottom: 448px;
+    right: 540px;
+    width: 240px;
+    height: 45px;
+    background-color: darkcyan;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    z-index: 1;
+}
+
+.input {
+    position: absolute;
+    bottom: 108px;
+    right: 540px;
+    width: 240px;
+    height: 50px;
+    background-color: #008a8a;
+    color: white;
+    z-index: 0;
+}
+
+.escondido {
+    display: none;
+}
+
+.visivel {
+    display: block;
+}
+
+.left_button {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background-color: darkcyan;
+    color: white;
+    width: 120px;
+    height: 50px;
+    bottom: 108px;
+    right: 660px;
+    cursor: pointer;
+    z-index: 1;
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+.right_button {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background-color: darkcyan;
+    color: white;
+    width: 120px;
+    height: 50px;
+    bottom: 108px;
+    right: 540px;
+    cursor: pointer;
+    z-index: 1;
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+.ind_button:hover {
+    background-color: #a2dad770;
+}
+
+#texto {
+    position: absolute;
+    left: 55px; 
+    top: 16px;
+    font-size: 15px;
+    z-index: 0;
+}
+
+.imagem {
+    position: relative;
+    height: 40px;
+    width: 45px;
+    left: 5px;
+    bottom: -2.5px;
+    z-index: 0;
+}
+
+.msgalex {
+    position: relative;
+    height: 13%;
+    left: 0px;
+    margin-top: 5px;
+    display: none;
+    clear: both;
+    z-index: 0;
+}
+
+.msgfred {
+    position: relative;
+    height: 13%;
+    float: right;
+    margin-right: 1px; 
+    margin-top: 5px;
+    display: none;
+    clear: both;
+    z-index: 0;
+}
+
+#fundopc {
+    color: #fff;
+    background: #000;
+    width: 530px;
+    height: 350px;
+    border-left: inset 30px;
+    border-right: inset 30px;
+    border-bottom: inset 30px;
+    border-color: transparent;
+    bottom: 150px;
+    left: 390px;
+    z-index: 0;
+    padding: 0px;
+    margin: 0px auto;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+#fb {
+    bottom: -10px;
+    vertical-align: middle;
+    left: 30px;
+    position: absolute;
+}
+
+#esqueceu {
+    bottom: -10px;
+    vertical-align: middle;
+    left: 30px;
+    position: absolute;
+}
+
+#esqueceusenha {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    background: transparent;
+    border-color: transparent;
+    font-size: 6px;
+    color: #fff;
+    bottom: 265px;
+    left: 313px;
+}
+
+#esqueceusenha:hover {
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+#pergunta {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 6px;
+    bottom: 207px;
+    left: 158px;
+    position: absolute;
+    color: #9e96a8;
+}
+
+#filme {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 6px;
+    bottom: 197px;
+    left: 158px;
+    position: absolute;
+    color: #9e96a8;
+}
+
+#buttonSenha {
+    bottom: 173px;
+    left: 310px;
+    height: 10px;
+    position: absolute;
+}
+
+#buttonSenha:hover {
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+#inputSenha {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 6px;
+    color: #3e3e3e;
+    bottom: 170px;
+    left: 196px;
+    width: 105px;
+    height: 10px;
+    border-width: 2px;
+    border-style: outset;
+}
+
+#post {
+    bottom: -10px;
+    vertical-align: middle;
+    left: 30px;
+    position: absolute;
+}
+
+#invalido {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 6px;
+    bottom: 156px;
+    left: 196px;
+    position: absolute;
+    color: darkred;
+}
+
+/* .imgInventario:hover {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2); 
+    
+    width: 530px;
+    height: 300px;
+    left: 390px;
+    top: 450px;
+} */
+
+#fechar {
+    left: 340px;
+    top: 5px;
+}
+
+#divInventario {
+    color: #fff;
+    background: #000;
+    width: 530px;
+    height: 350px;
+    border-left: inset 30px;
+    border-right: inset 30px;
+    border-bottom: inset 30px;
+    border-color: transparent;
+    bottom: 150px;
+    left: 390px;
+    z-index: 1;
+    padding: 0px;
+    margin: 0px auto;
+    position: absolute;
+}
+
+#divInpecionar {
+    color: #fff;
+    background: #000;
+    width: 530px;
+    height: 350px;
+    border-left: inset 30px;
+    border-right: inset 30px;
+    border-bottom: inset 30px;
+    border-color: transparent;
+    bottom: 150px;
+    left: 390px;
+    z-index: 1;
+    padding: 0px;
+    margin: 0px auto;
+    position: absolute;
+}
+
+
+.borda {
+    background: $color-container;
+    box-shadow:
+        /* Inner Background Color */
+        0 -6px 0 -2px transparent,
+        0 6px 0 -2px transparent,
+        0 -12px 0 -4px transparent,
+        0 12px 0 -4px transparent,
+        0 -18px 0 -8px transparent,
+        0 18px 0 -8px transparent,
+        0 -24px 0 -12px transparent,
+        0 24px 0 -12px transparent,
+        /* Inner Border */
+        -2px 0 0 0 #000,
+        2px 0 0 0 #000,
+        0 -4px 0 0 #000,
+        0 4px 0 0 #000,
+        0 -10px 0 -2px #000,
+        0 10px 0 -2px #000,
+        0 -14px 0 -4px #000,
+        0 14px 0 -4px #000,
+        0 -20px 0 -8px #000,
+        0 20px 0 -8px #000,
+        0 -26px 0 -12px #000,
+        0 26px 0 -12px #000,
+        /* Middle Border */
+        -4px 0 0 0 #000,
+        4px 0 0 0 #000,
+        0 -2px 0 2px #000,
+        0 2px 0 2px #000,
+        0 -8px 0 0px #000,
+        0 8px 0 0px #000,
+        0 -12px 0 -2px #000,
+        0 12px 0 -2px #000,
+        0 -16px 0 -4px #000,
+        0 16px 0 -4px #000,
+        0 -22px 0 -8px #000,
+        0 22px 0 -8px #000,
+        0 -28px 0 -12px #000,
+        0 28px 0 -12px #000,
+        /* Outer Border */
+        -6px 0 0 0 #fff,
+        6px 0 0 0 #fff,
+        0 0 0 4px #fff,
+        0 -6px 0 2px #fff,
+        0 6px 0 2px #fff,
+        0 -10px 0 0 #fff,
+        0 10px 0 0 #fff,
+        0 -14px 0 -2px #fff,
+        0 14px 0 -2px #fff,
+        0 -18px 0 -4px #fff,
+        0 18px 0 -4px #fff,
+        0 -24px 0 -8px #fff,
+        0 24px 0 -8px #fff,
+        0 -30px 0 -12px #fff,
+        0 30px 0 -12px #fff;
+}
+
+.topEyelid {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+    z-index: 2;
+    animation-name: sobeDesce;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.bottomEyelid {
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    bottom: 0;
+    height: 400px;
+    background-color: #000;
+    z-index: 2;
+    animation-name: sobeDesce;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes sobeDesce {
+    0% {
+        height: 300px;
+    }
+
+    35% {
+        height: 100px;
+    }
+
+    70% {
+        height: 400px;
+    }
+
+    95% {
+        height: 0px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+#puzzle {
+    color: #fff;
+    background: #000;
+    width: 530px;
+    height: 350px;
+    border-left: inset 30px;
+    border-right: inset 30px;
+    border-bottom: inset 30px;
+    border-color: transparent;
+    bottom: 150px;
+    left: 390px;
+    z-index: 0;
+    padding: 0px;
+    margin: 0px auto;
+    position: absolute;
+    text-align: center;
+}
+
+#slidingpuzzle {
+    color: #fff;
+    background: #000;
+    width: 530px;
+    height: 350px;
+    border-left: inset 30px;
+    border-right: inset 30px;
+    border-bottom: inset 30px;
+    border-color: transparent;
+    bottom: 150px;
+    left: 390px;
+    z-index: 0;
+    padding: 0px;
+    margin: 0px auto;
+    position: absolute;
+    text-align: center;
+}
+
+#ajuda {
+    color: #fff;
+    background: #000;
+    width: 530px;
+    height: 350px;
+    border-left: inset 30px;
+    border-right: inset 30px;
+    border-bottom: inset 30px;
+    border-color: transparent;
+    bottom: 150px;
+    left: 390px;
+    z-index: 0;
+    padding: 0px;
+    margin: 0px auto;
+    position: absolute;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+#baixo {
+    position: absolute;
+    left: 4px;
+    width: 520px;
+    height: 80px;
+    bottom: -27px;
+    z-index: 1;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.pecasantes {
+    height: 75px;
+    width: 135px;
+    left: -22px;
+    display: inline-block;
+}
+
+.pecas {
+    position: absolute;
+    height: 75px;
+    z-index: 1;
+    width: 135px;
+    background: #fff;
+    border: inset;
+}
+
+.pecas:hover {
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+#peca1a {
+    left: 62.5px;
+    bottom: 229px;
+}
+
+#peca1b {
+    left: 197.5px;
+    bottom: 229px;
+
+}
+
+#peca1c {
+    left: 332.5px;
+    bottom: 229px;
+}
+
+#peca2a {
+    left: 62.5px;
+    bottom: 149px;
+}
+
+#peca2b {
+    left: 197.5px;
+    bottom: 149px;
+}
+
+#peca2c {
+    left: 332.5px;
+    bottom: 149px;
+}
+
+#peca3a {
+    left: 62.5px;
+    bottom: 70px;
+}
+
+#peca3b {
+    left: 197.5px;
+    bottom: 70px;
+}
+
+#peca3c {
+    left: 332.5px;
+    bottom: 70px;
+}
+
+.piece {
+    width: 28px;
+    height: 30px;
+    border: 0px;
+}
+
+.button {
+    width: 25px;
+    height: 25px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.button:hover {
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: #0F0;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.pink {
+    background-color: fuchsia;
+}
+
+#game-table {
+    position: absolute;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+    top: 14px;
+}
+
+.novojogo {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    padding: 10px;
+    background: #000;
+    border: inset 2px;
+    border-color: #fff;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+}
+
+#instrucoes {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    padding: 10px;
+    background: #000;
+    border: inset 2px;
+    border-color: #fff;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+}
+
+#instrucoes:hover{
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+#instru {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    color: #fff;
+    vertical-align: middle;
+    text-align: justify;
+    line-height: 1.6;
+    top: 150px;
+}
+
+#instrucao {
+    color: #fff;
+    background: #000;
+    width: 530px;
+    height: 350px;
+    border-left: inset 30px;
+    border-right: inset 30px;
+    border-bottom: inset 30px;
+    border-color: transparent;
+    bottom: 150px;
+    left: 390px;
+    z-index: 0;
+    padding: 0px;
+    margin: 0px auto;
+    position: absolute;
+    text-align: center;
+}
+
+.novojogo:hover {
+    cursor: url('imagens/cursor-click.png'), auto;
+}
+
+#button-table {
+    border-spacing: 4px;
+    vertical-align: top;
+}
+
+#turn-counter {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+}
+
+#titles {
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(25deg);
+    font-family: 'Press Start 2P', cursive;
+}
+
+#titles:after{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+#titlecontent {
+	position: absolute;
+	top: 100%;
+	animation: scroll 100s linear 4s infinite;
+}
+
+@keyframes scroll {
+	0%   { top:  100%; }
+	100% { top: -170%; }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
