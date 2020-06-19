@@ -2043,8 +2043,8 @@ function Tela8(game) {
                 setTimeout(function () {
                     mudarTexto(["Que barulho foi esse? Freddie...", " "], 50, 800, 4, mudarTexto(["Aleeex... Eu posso te ouvir", " "], 10, 800, 5, function () {
                         setTimeout(billyaparece)
-                }, 3000)
-            }
+                }, 3000))
+            })
 
             function billyaparece() {
                 var billy = game.add.sprite(470, 188, "billy");
