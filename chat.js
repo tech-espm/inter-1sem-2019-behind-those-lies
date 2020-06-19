@@ -31,7 +31,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
     setTimeout(function () {scroll()}, 2000)
   }
 
-  function clicar1b() {
+  function clicar1b() {if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("1b").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("msg2").style.display = "block" }, 2000)
     setTimeout(function () {mostrarGrupo("grupo2"); clicando = false;}, 2500)
@@ -39,7 +42,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
     setTimeout(function () {scroll()}, 2000)
   }
 
-  function clicar2a() {
+  function clicar2a() {if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("2a").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("msg3").style.display = "block" }, 2000)
     setTimeout(function () {mostrarGrupo("grupo3"); clicando = false;}, 2500)
@@ -47,7 +53,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
     setTimeout(function () {scroll()}, 2000)
   }
 
-  function clicar2b() {
+  function clicar2b() {if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("2b").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("msg3").style.display = "block" }, 2000)
     setTimeout(function () {mostrarGrupo("grupo3"); clicando = false;}, 2500)
@@ -55,7 +64,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
     setTimeout(function () {scroll()}, 2000)
   }
 
-  function clicar3a() {
+  function clicar3a() {if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("3a").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("msg4").style.display = "block" }, 2000)
     setTimeout(function () {mostrarGrupo("grupo4"); clicando = false;}, 2500)
@@ -63,7 +75,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
     setTimeout(function () {scroll()}, 2000)
   }
 
-  function clicar3b() {
+  function clicar3b() {if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("3b").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("msg4").style.display = "block" }, 2000)
     setTimeout(function () {mostrarGrupo("grupo4"); clicando = false;}, 2500)
@@ -71,7 +86,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
     setTimeout(function () {scroll()}, 2000)
   }
 
-  function clicar4a() {
+  function clicar4a() {if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("4a").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("msg5").style.display = "block" }, 2000)
     setTimeout(function () {document.getElementById("grupo4").className = "escondido"}, 2500)
@@ -97,6 +115,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
   
 
   function clicar4b() {
+      if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("4b").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("msg5").style.display = "block" }, 2000)
     setTimeout(function () {document.getElementById("grupo4").className = "escondido"}, 2500)
@@ -121,6 +143,10 @@ var icon_mensagem2 = document.getElementById("icon_mensagem2");
   }
 
 function clicar7a() {
+    if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("7a").style.display = "block" }, 500) 
     setTimeout(function () {document.getElementById("grupo7").className = "escondido"}, 1500)
     setTimeout(function () {scroll()}, 500)
@@ -171,6 +197,10 @@ function clicar7a() {
 }
 
 function clicar7b() {
+    if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("7b").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("grupo7").className = "escondido"}, 1500)
     setTimeout(function () {scroll()}, 500)
@@ -220,6 +250,10 @@ function clicar7b() {
 }
 
 function clicar8a() {
+    if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("8a").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("9a").style.display = "block" }, 2000)
     setTimeout(function () {document.getElementById("msg10").style.display = "block" }, 3500)
@@ -232,6 +266,10 @@ function clicar8a() {
   }
 
 function clicar8b() {
+    if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("8b").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("9b").style.display = "block" }, 2000)
     setTimeout(function () {document.getElementById("msg11").style.display = "block" }, 3500)
@@ -242,6 +280,10 @@ function clicar8b() {
   }
 
 function clicar11a() {
+    if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("11a").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("grupo11").className = "escondido"}, 2000)
     setTimeout(function () {scroll()}, 500)
@@ -251,6 +293,10 @@ function clicar11a() {
   }
 
 function clicar11b() {
+    if (clicando === true) {
+        return;
+    }
+    clicando = true;
     setTimeout(function () {document.getElementById("11b").style.display = "block" }, 500)
     setTimeout(function () {document.getElementById("grupo11").className = "escondido"}, 2000)
     setTimeout(function () {scroll()}, 500)

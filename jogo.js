@@ -61,13 +61,14 @@ function toggleCelular(){
 function notificacao() {
         icon_mensagem1.style.display = "none";
         icon_mensagem2.style.display = "";
+        scroll();
         var vezes = 0;
         function mudar() {
-            icon_mensagem2.style.marginTop = (Math.random() * 15) + 'px';
-            icon_mensagem2.style.marginLeft = (Math.random() * 15) + 'px';
+            icon_mensagem2.style.marginTop = (Math.random() * 10) + 'px';
+            icon_mensagem2.style.marginLeft = (Math.random() * 10) + 'px';
 
                 vezes++;
-                if (vezes < 250) {
+                if (vezes < 150) {
                     setTimeout(mudar, 20);
                     
                 } else {
@@ -88,7 +89,7 @@ function criarCarro() {
     carro.events.onInputDown.add(function () {
         mudarTexto(["É, o carro ainda está aqui...",
                        "E os pneus... Ué, parece que foram rasgados! Que estranho...",
-                       " "], 50, 800, 0, notificacao2);
+                       " "], 50, 800, 0, notificacao);
     });
 }
 
@@ -100,6 +101,8 @@ function notificacao2() {
 }
 
 function proximo5() {
+    icon_mensagem1.style.display = "none";
+    icon_mensagem2.style.display = "none";
     botao = game.add.image(735, 5, "botao");
     botao.alpha = 1.0;
     botao.inputEnabled = true;
@@ -342,6 +345,8 @@ function esqueceu() {
                            "eu deveria ir no trabalho dela ver se ela sabe de alguma coisa",
                            " "], 50, 800, 0, function () {
                 fecharPc();
+                icon_mensagem1.style.display = "none";
+                icon_mensagem2.style.display = "none";
                 var botao = game.add.image(735, 5, "botao");
                 botao.alpha = 1.0;
                 botao.inputEnabled = true;
@@ -601,6 +606,8 @@ function freddie7() {
 }
 
 function proximo7() {
+    icon_mensagem1.style.display = "none";
+    icon_mensagem2.style.display = "none";
     botao = game.add.image(735, 5, "botao");
     botao.alpha = 1.0;
     botao.inputEnabled = true;
@@ -742,16 +749,19 @@ function Tela1(game) {
         game.load.crossOrigin = "anonymous";
 
         game.load.image("fechar", "imagens/fechar.png");
-        game.load.image("quartobilly", "imagens/quartobilly.png");
+        game.load.image("quartofredy", "imagens/quartofred.png");
         game.load.image("botao", "imagens/botao.png");
-        game.load.image("dialogo", "imagens/dialogo.png");
-        game.load.image("pc", "imagens/pc.png");
-        game.load.image("fundopc", "imagens/fundopc.png");
+        game.load.image("dialogo", "imagens/dialogo.png");      
         game.load.image("mochila", "imagens/mochila.png");
-        game.load.image("avengers", "imagens/avengers.png");
-        game.load.image("flash", "imagens/flash.png");
-        game.load.image("estante", "imagens/estante.png");
-        game.load.audio("knock", "audios/knockdoor.mp3");
+        game.load.image("chave", "imagens/chave.png");
+        game.load.image("porta", "imagens/porta.png");
+        game.load.image("portaaberta", "imagens/portaaberta.png");
+        game.load.image("caneca", "imagens/caneca.png");
+        game.load.image("chavepequena", "imagens/chavepequena.png");
+        game.load.image("armario", "imagens/armario.png");
+        game.load.image("caixa", "imagens/caixa.png");
+        game.load.image("vaso", "imagens/vaso.png");
+        game.load.audio("portaabrindo", "audios/opendoor.mp3");        
     }
 
     var tween = null;
@@ -788,7 +798,7 @@ function Tela1(game) {
         mudandoTexto = false;
         inventarioCriado = false;
 
-        fundo = game.add.image(0, 0, "quartobilly");
+        fundo = game.add.image(0, 0, "quartofredy");
 
         botaoCriarInventario = game.add.image(540, 380, "mochila");
         botaoCriarInventario.width = 86;
@@ -872,6 +882,8 @@ function Tela1(game) {
                 var portaaberta = game.add.image(0, 180, "portaaberta");
                 var portaabrindo = game.add.audio("portaabrindo")
                 portaaberta.height = 320;
+                icon_mensagem1.style.display = "none";
+                icon_mensagem2.style.display = "none";
                 var botao = game.add.image(735, 5, "botao");
                 botao.alpha = 1.0;
                 botao.inputEnabled = true;
@@ -929,19 +941,16 @@ function Tela2(game) {
         game.load.crossOrigin = "anonymous";
 
         game.load.image("fechar", "imagens/fechar.png");
-        game.load.image("quartofredy", "imagens/quartofred.png");
+        game.load.image("quartobilly", "imagens/quartobilly.png");
         game.load.image("botao", "imagens/botao.png");
         game.load.image("dialogo", "imagens/dialogo.png");
+        game.load.image("pc", "imagens/pc.png");
+        game.load.image("fundopc", "imagens/fundopc.png");
         game.load.image("mochila", "imagens/mochila.png");
-        game.load.image("chave", "imagens/chave.png");
-        game.load.image("porta", "imagens/porta.png");
-        game.load.image("portaaberta", "imagens/portaaberta.png");
-        game.load.image("caneca", "imagens/caneca.png");
-        game.load.image("chavepequena", "imagens/chavepequena.png");
-        game.load.image("armario", "imagens/armario.png");
-        game.load.image("caixa", "imagens/caixa.png");
-        game.load.image("vaso", "imagens/vaso.png");
-        game.load.audio("portaabrindo", "audios/opendoor.mp3");
+        game.load.image("avengers", "imagens/avengers.png");
+        game.load.image("flash", "imagens/flash.png");
+        game.load.image("estante", "imagens/estante.png");
+        game.load.audio("knock", "audios/knockdoor.mp3");
     }
 
     this.create = function () {
@@ -952,7 +961,8 @@ function Tela2(game) {
         botaoPodeClicar = true;
         mudandoTexto = false;
 
-        fundo = game.add.image(0, 0, "quartofred");
+        fundo = game.add.image(0, 0, "quartobilly");
+        icon_mensagem1.style.display = "";
 
         
         var knock = game.add.audio("knock", 1.0, false);
@@ -965,7 +975,7 @@ function Tela2(game) {
             "Ue, será que não tem ninguém em casa?",
             " "
             ], 50, 800, 0, notificacao);
-        }, 2000);        
+        }, 2000); 
 
         var dialogo = game.add.image(0, 500, "dialogo");
         dialogo.alpha = 0.7;
@@ -1016,6 +1026,7 @@ function Tela3(game) {
     this.create = function () {
 
         fundo = game.add.image(0, 0, "restaurante");
+        icon_mensagem1.style.display = "";
         var dialogo = game.add.image(0, 500, "dialogo");
         dialogo.alpha = 0.7;
     
@@ -1179,6 +1190,8 @@ function Tela3(game) {
         }
 
         function proximo4() {
+            icon_mensagem1.style.display = "none";
+            icon_mensagem2.style.display = "none";
             var botao = game.add.image(735, 5, "botao");
             botao.alpha = 1.0;
             botao.inputEnabled = true;
@@ -1236,6 +1249,7 @@ function Tela4(game) {
 
     this.create = function () {
         fundo = game.add.image(0, 0, "portao");
+        icon_mensagem1.style.display = "";
         var dialogo = game.add.image(0, 500, "dialogo");
         dialogo.alpha = 0.7;
         imgMochila.style.display = "";
@@ -1441,6 +1455,8 @@ function Tela5(game) {
     }
 
     function proximo6() {
+        icon_mensagem1.style.display = "none";
+        icon_mensagem2.style.display = "none";
         botao = game.add.image(735, 5, "botao");
         botao.alpha = 1.0;
         botao.inputEnabled = true;
@@ -1492,6 +1508,7 @@ function Tela6(game) {
 
     this.create = function () {
         fundo = game.add.image(0, 0, "posto");
+        icon_mensagem1.style.display = "";
         var dialogo = game.add.image(0, 500, "dialogo");
         dialogo.alpha = 0.7;
         imgMochila.style.display = "";
@@ -1709,6 +1726,8 @@ function Tela7(game) {
         
 
         if(fred.x >= 2089){
+            icon_mensagem1.style.display = "none";
+            icon_mensagem2.style.display = "none";
             var botao = game.add.image(2195, 5, "botao");
             botao.alpha = 1.0;
             botao.inputEnabled = true;
@@ -1960,8 +1979,8 @@ function Tela8(game) {
         }
 
         function alex9() {
-            mudarTexto(["Peguei um galho que estava perto da minha mão.", "Acertei o olho dele duas ou três vezes. Achei que ele so /n/tivesse caído, mas esperei por muito tempo e ele não se mexeu, então eu fugi, mas… ele ainda deve  estar ali.",
-                        "Não sei o que fazer com o corpo, com o sangue…",
+            mudarTexto(["Peguei um galho que estava perto da minha mão.", "Acertei o olho dele duas ou três vezes. Achei que ele so tivesse caído, mas esperei por muito tempo e ele não se mexeu, então eu fugi, mas… ele ainda deve  estar ali.",
+                        "Não sei o que fazer…",
                         " "], 50, 800, 4, f10)
         }
 
@@ -1970,11 +1989,11 @@ function Tela8(game) {
         }
 
         function alex10() {
-            mudarTexto(["Eu MATEI alguém, meu Deus!! Eu matei alguém...", " "], 50, 800, 4, f11)
+            mudarTexto(["Eu posso ter MATADO alguém, Freddie!! Matado Billy...", " "], 50, 800, 4, f11)
         }
 
         function f11() {
-            mudarTexto(["Foi legítima defesa, Alex. Onde ele está?  Vamos enterrar ou… não sei.", " "], 50, 800, 0, alex11)
+            mudarTexto(["Foi legítima defesa, Alex. Onde ele estava? Vamos até lá.", " "], 50, 800, 0, alex11)
         }
 
         function alex11() {
@@ -2006,7 +2025,7 @@ function Tela8(game) {
             sangue.inputEnabled = true;
             sangue.input.useHandCursor = true;
             sangue.events.onInputDown.add(function () {
-                mudarTexto(["Alex, cadê o corpo?", " "], 50, 800, 0, alex12)
+                mudarTexto(["Alex, cadê ele?", " "], 50, 800, 0, alex12)
             })
 
             function alex12() {
@@ -2022,7 +2041,8 @@ function Tela8(game) {
                 var audiopassos = game.add.audio("passos", 1.0, false);
                 audiopassos.play()
                 setTimeout(function () {
-                    mudarTexto(["Que barulho foi esse? Freddie...", " "], 50, 800, 4, billyaparece)
+                    mudarTexto(["Que barulho foi esse? Freddie...", " "], 50, 800, 4, mudarTexto(["Aleeex... Eu posso te ouvir", " "], 10, 800, 5, function () {
+                        setTimeout(billyaparece)
                 }, 3000)
             }
 
@@ -2031,12 +2051,9 @@ function Tela8(game) {
                 billy.alpha = 0;
                 game.add.tween(billy).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true);
                 setTimeout(function () {
-                    mudarTexto(["E eu... faria.. tudo... de novo", " "], 10, 800, 5, function () {
-                        setTimeout(function () {
-                            game.state.start("Tela9")
-                        }, 1500)
-                    })
-                })
+                    game.state.start("Tela9")
+                }, 1500)
+                }
             }
         }
     }
